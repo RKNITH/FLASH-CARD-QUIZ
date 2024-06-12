@@ -1,0 +1,189 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    padding: 20px;
+    margin: 0;
+    box-sizing: border-box;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* Center horizontally */
+    justify-content: center;
+    min-height: 100vh;
+    /* Center vertically */
+}
+
+header {
+    top: 0;
+    position: absolute;
+}
+
+header,
+footer {
+    background-color: #22048f;
+    color: #fff;
+    padding: 10px 0;
+    width: 100%;
+}
+
+h1 {
+    margin: 0;
+}
+
+main {
+    margin-top: 20px;
+}
+
+
+.flashcard-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    /* Add shadow */
+    border-radius: 20px;
+    /* Add rounded corners */
+    background-color: #f0f0f0;
+    /* Set background color */
+    padding: 20px;
+    /* Add padding */
+}
+
+
+.flashcard {
+    width: 300px;
+    height: 200px;
+    perspective: 1000px;
+    position: relative;
+    background-color: #9206f0;
+    /* Set background color */
+    border-radius: 10px;
+    /* Add rounded corners */
+    box-shadow: 10px 4px 4px rgba(228, 205, 4, 0.5);
+    z-index: 1;
+    /* Add shadow */
+}
+
+.flashcard-front,
+.flashcard-back {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    backface-visibility: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.flashcard-front {
+    background-color: #d005f8bb;
+    color: #fff;
+    /* Set text color */
+    border-radius: 10px;
+    /* Add rounded corners */
+}
+
+.flashcard-back {
+    background-color: #0559f7;
+    color: #212529;
+    /* Set text color */
+    border-radius: 10px;
+    /* Add rounded corners */
+    transform: rotateY(180deg);
+}
+
+.flashcard p {
+    font-family: Arial, sans-serif;
+    /* Set font family */
+    font-size: 1.2rem;
+    /* Set font size */
+    padding: 20px;
+    /* Add padding */
+}
+
+
+
+
+button {
+    padding: 10px 20px;
+    margin: 10px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+
+#interestingFacts {
+    margin-top: 20px;
+    /* Add space between the flashcard and the interesting facts section */
+}
+
+#interestingFacts h2 {
+    color: #22048f;
+    /* Change the color of the heading */
+}
+
+#interestingFacts ul {
+    list-style-type: none;
+    /* Remove bullet points from the list */
+    padding: 0;
+}
+
+#interestingFacts li {
+    margin-bottom: 10px;
+    /* Add space between each fact */
+    text-align: left;
+    /* Align text to the left */
+}
+
+#interestingFacts li::before {
+    content: '\2022';
+    /* Add a bullet point before each list item */
+    color: #22048f;
+    /* Match the color of the bullet point with the heading */
+    font-weight: bold;
+    /* Make the bullet point bold */
+    margin-right: 5px;
+    /* Add space between the bullet point and the text */
+}
+
+
+
+
+footer {
+    margin-top: auto;
+    color: #fff;
+    padding: 10px 0;
+    bottom: 0;
+    position: absolute;
+}
+
+@media (max-width: 600px) {
+    #interestingFacts {
+        margin: 20px;
+        margin-bottom: 100px;
+
+    }
+
+
+    footer {
+        position: fixed;
+        bottom: 0;
+        width: 100%;
+        margin-top: 30px;
+    }
+
+    .flashcard-container {
+        margin-top: 50px;
+    }
+
+
+}
